@@ -5,13 +5,16 @@ from translator import englishToFrench, frenchToEnglish
 class TestEnglishtoFrench(unittest.TestCase): 
     def test_englishToFrench(self):         
         self.assertEqual(englishToFrench('Hello'), 'Bonjour')   
-        self.assertEqual(englishToFrench(''), '')
+class TestEnglishtoFrench2(unittest.TestCase): 
+    def test_englishToFrench(self):         
+        self.assertNotEqual(englishToFrench('Hello'), 'Bonjouro') 
 
 class TestFrenchtoEnglish(unittest.TestCase): 
-    def test_frenchToEnglish(self): 
-        
+    def test_frenchToEnglish(self):         
         self.assertEqual(frenchToEnglish('Bonjour'), 'Hello')    
-        self.assertEqual(frenchToEnglish(''), '')
+class TestFrenchtoEnglish2(unittest.TestCase): 
+    def test_frenchToEnglish(self):         
+        self.assertNotEqual(frenchToEnglish('Bonjour'), 'Helloo')  
 
 unittest.main()
 
